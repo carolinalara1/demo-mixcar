@@ -1,0 +1,87 @@
+<!DOCTYPE html><html class="no-js"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Some Title - name</title><meta name="description" content="A description"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.png"><link rel="stylesheet" href="css/styles.css"><script>if (!('registerElement' in document
+  && 'createShadowRoot' in HTMLElement.prototype
+  && 'import' in document.createElement('link')
+  && 'content' in document.createElement('template'))) {
+        document.write('<script src="webcomponents.min.js"><\/script>');
+  }
+(function () {
+  'use strict';
+  var head, style;
+
+  if (window.WebComponents) {
+    window.addEventListener('WebComponentsReady', function () {
+      document.body.removeAttribute('unresolved');
+    });
+  } else {
+    // Create the same style as webcomponents.js
+    style = document.createElement('style');
+    style.textContent = 'body {transition:opacity ease-in 0.2s;}\n' +
+      'body[unresolved] {opacity:0; display:block; overflow:hidden; position:relative;}';
+    head = document.querySelector('head');
+    head.insertBefore(style, head.firstChild);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.removeAttribute('unresolved');
+    });
+  }
+}());</script><link rel="import" href="bin-packing-grid/bin-packing-grid.html"><style>@media (max-width: 480px) {
+  img {
+     max-width: 430px;
+  }
+}
+@media (max-width: 350px) {
+  img {
+     max-width: 280px;
+  }
+}
+html, body {
+  color: #7D787F;
+  margin: 0;
+  height: 100%;
+  line-height: 28px;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+h1 {
+  color: inherit;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+bin-packing-grid {
+  margin: auto;
+  color: white;
+}
+bin-packing-grid bin-packing-item {
+  background-color: rgb(128, 125, 123);
+  border: 0px solid white;
+  box-shadow: 3px 3px 15px black;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0px;
+  text-align: center;
+  transition-property: left, top;
+  transition-duration: 700ms;
+}
+bin-packing-item.text {
+  overflow: auto;
+}
+bin-packing-item.text div {
+  background-color: rgb(34, 59, 64);
+  color: rgb(182, 182, 178);
+  font-size: 16px;
+  padding: 20px;
+}
+bin-packing-grid::shadow .bin-packing-filler {
+  background-color: rgb(128, 125, 123);
+  border: 0px solid white;
+  box-shadow: 3px 3px 15px black;
+}
+bin-packing-grid > .bin-packing-filler {
+  background-color: rgb(128, 125, 123);
+  border: 0px solid white;
+  box-shadow: 3px 3px 15px black;
+}</style></head><body unresolved><div class="container"><div class="well"><h1>404 Not found</h1><h3>Whoops. Looks like what you're looking for can't be found. :(</h3></div></div></body></html>
